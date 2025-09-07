@@ -1,43 +1,57 @@
 {
   "expo": {
-    "name": "alx-coffee-shop-app",
+    "name": "ALX Coffee Shop",
     "slug": "alx-coffee-shop-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/coffee_app_icon.png",
     "scheme": "alxcoffeeshopapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.alx.coffeeshop"
+      "bundleIdentifier": "com.alx.coffeeshop",
+      "icon": "./assets/images/coffee_app_icon.png",
+      "splash": {
+        "image": "./assets/images/coffee_splash_screen.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#0C0F14"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/coffee_app_icon.png",
+        "backgroundColor": "#0C0F14"
       },
+      "icon": "./assets/images/coffee_app_icon.png",
       "package": "com.alx.coffeeshop",
       "versionCode": 1,
-      "permissions": []
+      "permissions": [],
+      "splash": {
+        "ldpi": "./assets/images/coffee_splash_screen.png",
+        "mdpi": "./assets/images/coffee_splash_screen.png",
+        "hdpi": "./assets/images/coffee_splash_screen.png",
+        "xhdpi": "./assets/images/coffee_splash_screen.png",
+        "xxhdpi": "./assets/images/coffee_splash_screen.png",
+        "xxxhdpi": "./assets/images/coffee_splash_screen.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#0C0F14"
+      }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/coffee_app_icon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "image": "./assets/images/coffee_splash_screen.png",
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#0C0F14"
         }
       ]
     ],

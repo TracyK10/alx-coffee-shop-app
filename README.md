@@ -4,8 +4,12 @@ A modern, cross-platform mobile application for a coffee shop, built with React 
 
 ## 🎨 Design Assets
 
-Original design assets are available in the `assets/images/figma-designs/` directory. These include:
+### App Assets
+- **App Icon**: Located at `assets/images/coffee_app_icon.svg`
+- **Splash Screen**: Located at `assets/images/coffee_splash_screen.html`
 
+### Design Resources
+Original design assets are available in the `assets/images/figma-designs/` directory. These include:
 - Complete UI/UX mockups
 - Icons and illustrations
 - Color palettes and typography guides
@@ -14,6 +18,9 @@ Original design assets are available in the `assets/images/figma-designs/` direc
 > **Note**: These designs were created by [B from NAM Design](https://www.figma.com/@namtran) and are used with permission.
 
 ## 🚀 Features
+
+- **Custom Splash Screen**: Beautiful loading experience with app branding
+- **Custom App Icon**: Professional iconography for both iOS and Android
 
 - **User Authentication**: Secure sign-in and sign-up flows
 - **Menu Browsing**: Browse through a variety of coffee items
@@ -24,6 +31,9 @@ Original design assets are available in the `assets/images/figma-designs/` direc
 - **Dark/Light Mode**: Supports system theme preferences
 
 ## 🛠 Tech Stack
+
+- **Splash Screen**: `expo-splash-screen`
+- **App Icon**: `@expo/vector-icons`
 
 - **Framework**: React Native with Expo
 - **Navigation**: Expo Router, React Navigation
@@ -77,6 +87,18 @@ Original design assets are available in the `assets/images/figma-designs/` direc
 ```
 
 ## 🚀 Getting Started
+
+### Adding Custom App Icon and Splash Screen
+
+1. **App Icon Setup**:
+   - Place your `coffee_app_icon.svg` in `assets/images/`
+   - Run `npx expo prebuild` to generate platform-specific icon assets
+   - The icon will be automatically used for both iOS and Android
+
+2. **Splash Screen Setup**:
+   - The splash screen is implemented in `components/SplashScreen.tsx`
+   - Configured in `app/_layout.tsx` to show during app initialization
+   - Automatically hides when the app is ready
 
 ### Prerequisites
 
