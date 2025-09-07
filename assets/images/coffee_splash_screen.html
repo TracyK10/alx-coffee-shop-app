@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop - Splash Screen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #2C1810 0%, #5D2E0A 50%, #8B4513 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated background particles */
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.1; }
+        }
+
+        /* Main logo container */
+        .logo-container {
+            text-align: center;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Coffee cup SVG */
+        .coffee-logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* App name */
+        .app-name {
+            color: #FFFFFF;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            animation: fadeIn 2s ease-out 0.5s both;
+        }
+
+        /* Tagline */
+        .tagline {
+            color: #E8C4A0;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-out 1s both;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Loading animation */
+        .loading-container {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out 1.5s both;
+        }
+
+        .loading-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #CD853F, #DEB887, #CD853F);
+            border-radius: 2px;
+            animation: loading 2s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% { width: 0%; transform: translateX(-100%); }
+            50% { width: 100%; transform: translateX(0%); }
+            100% { width: 100%; transform: translateX(100%); }
+        }
+
+        /* Bottom text */
+        .bottom-text {
+            position: absolute;
+            bottom: 40px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            animation: fadeIn 1s ease-out 2s both;
+        }
+
+        /* Steam animation for coffee cup */
+        .steam {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 30px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+            border-radius: 50%;
+            animation: steam 2s ease-in-out infinite;
+        }
+
+        .steam:nth-child(1) { left: 45%; animation-delay: 0s; }
+        .steam:nth-child(2) { left: 50%; animation-delay: 0.5s; }
+        .steam:nth-child(3) { left: 55%; animation-delay: 1s; }
+
+        @keyframes steam {
+            0%, 100% { opacity: 0; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 1; transform: translateX(-50%) translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background particles -->
+    <div class="particle" style="width: 4px; height: 4px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+    <div class="particle" style="width: 6px; height: 6px; top: 60%; left: 85%; animation-delay: 1s;"></div>
+    <div class="particle" style="width: 3px; height: 3px; top: 80%; left: 15%; animation-delay: 2s;"></div>
+    <div class="particle" style="width: 5px; height: 5px; top: 30%; left: 80%; animation-delay: 1.5s;"></div>
+    <div class="particle" style="width: 4px; height: 4px; top: 70%; left: 25%; animation-delay: 0.5s;"></div>
+    
+    <div class="logo-container">
+        <!-- Coffee Cup SVG with Steam -->
+        <div style="position: relative; display: inline-block;">
+            <svg class="coffee-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="cupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#E0E0E0;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="coffeeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#DEB887;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Cup -->
+                <path d="M 20 95 L 15 35 Q 15 25 25 25 L 85 25 Q 95 25 95 35 L 90 95 Q 90 105 80 105 L 30 105 Q 20 105 20 95 Z" 
+                      fill="url(#cupGrad)" stroke="#CCCCCC" stroke-width="1"/>
+                
+                <!-- Coffee -->
+                <ellipse cx="55" cy="30" rx="35" ry="8" fill="url(#coffeeGrad)"/>
+                
+                <!-- Handle -->
+                <path d="M 95 45 Q 110 45 110 60 Q 110 75 95 75" 
+                      fill="none" stroke="url(#cupGrad)" stroke-width="6" stroke-linecap="round"/>
+                
+                <!-- Latte Art -->
+                <ellipse cx="50" cy="30" rx="15" ry="3" fill="#F5F5DC" opacity="0.8"/>
+                <path d="M 50 27 L 50 33" stroke="#E6D7B8" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+            
+            <!-- Steam effects -->
+            <div class="steam"></div>
+            <div class="steam"></div>
+            <div class="steam"></div>
+        </div>
+        
+        <h1 class="app-name">COFFEE SHOP</h1>
+        <p class="tagline">Brew Your Perfect Moment</p>
+        
+        <div class="loading-container">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    
+    <p class="bottom-text">Crafted with ♥ for coffee lovers</p>
+
+    <script>
+        // Add some dynamic particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.width = Math.random() * 6 + 2 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDuration = Math.random() * 4 + 3 + 's';
+            particle.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 2000);
+        
+        // Simulate app loading
+        setTimeout(() => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(() => {
+                // Here you would normally navigate to your main app
+                console.log('Navigate to main app');
+            }, 500);
+        }, 4000);
+    </script>
+</body>
+</html>

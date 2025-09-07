@@ -1,0 +1,25 @@
+<svg width="375" height="300" viewBox="0 0 375 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="37.5" y="50" width="300" height="200" rx="20" fill="#EDD6C8"/>
+  <rect x="87.5" y="100" width="200" height="100" rx="10" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M162.5 150H187.5M162.5 160H187.5M162.5 170H187.5" stroke="#C67C4E" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="137.5" cy="160" r="10" fill="#C67C4E"/>
+  <path d="M187.5 150H212.5M187.5 160H212.5M187.5 170H212.5" stroke="#C67C4E" stroke-width="2" stroke-linecap="round"/>
+  <path d="M137.5 120H237.5V180H137.5V120Z" fill="#C67C4E" fill-opacity="0.1"/>
+  <path d="M137.5 120H237.5V130H137.5V120Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <circle cx="147.5" cy="125" r="2.5" fill="#C67C4E"/>
+  <circle cx="157.5" cy="125" r="2.5" fill="#C67C4E"/>
+  <circle cx="167.5" cy="125" r="2.5" fill="#C67C4E"/>
+  <path d="M177.5 122.5H232.5V127.5H177.5V122.5Z" fill="#C67C4E" fill-opacity="0.5"/>
+  <path d="M137.5 170H237.5V175H137.5V170Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 180H237.5V185H137.5V180Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 190H237.5V195H137.5V190Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 200H237.5V205H137.5V200Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 210H237.5V215H137.5V210Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 220H237.5V225H137.5V220Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 170H237.5V175H137.5V170Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 180H237.5V185H137.5V180Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 190H237.5V195H137.5V190Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 200H237.5V205H137.5V200Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 210H237.5V215H137.5V210Z" fill="#C67C4E" fill-opacity="0.2"/>
+  <path d="M137.5 220H237.5V225H137.5V220Z" fill="#C67C4E" fill-opacity="0.2"/>
+</svg>

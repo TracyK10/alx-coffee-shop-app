@@ -8,15 +8,21 @@
     "scheme": "alxcoffeeshopapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.alx.coffeeshop"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "package": "com.alx.coffeeshop",
+      "versionCode": 1,
+      "permissions": []
     },
     "web": {
       "bundler": "metro",

@@ -1,45 +1,112 @@
+// app/(tabs)/_layout.tsx
 import { Tabs } from 'expo-router';
-import React from 'react';
-import { Platform } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { View, StyleSheet } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+type TabBarIconProps = {
+  focused: boolean;
+  color: string;
+  size: number;
+};
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+  const insets = useSafeAreaInsets();
+  
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+    <View style={styles.container}>
+      <Tabs
+        screenOptions={{
+          headerShown: false,
+          tabBarShowLabel: false,
+          tabBarStyle: [styles.tabBar, { 
+            height: 60 + insets.bottom,
+            paddingBottom: insets.bottom > 0 ? 10 : 0,
+          }],
         }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
-    </Tabs>
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            tabBarIcon: ({ focused }: TabBarIconProps) => (
+              <View style={styles.tabIcon}>
+                <Ionicons 
+                  name={focused ? 'home' : 'home-outline'} 
+                  size={24} 
+                  color={focused ? '#D17842' : '#9CA3AF'} 
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="favorites"
+          options={{
+            tabBarIcon: ({ focused }: TabBarIconProps) => (
+              <View style={styles.tabIcon}>
+                <Ionicons 
+                  name={focused ? 'heart' : 'heart-outline'} 
+                  size={24} 
+                  color={focused ? '#D17842' : '#9CA3AF'} 
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="orders"
+          options={{
+            tabBarIcon: ({ focused }: TabBarIconProps) => (
+              <View style={styles.tabIcon}>
+                <Ionicons 
+                  name={focused ? 'bag' : 'bag-outline'}
+                  size={24} 
+                  color={focused ? '#D17842' : '#9CA3AF'}
+                />
+              </View>
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="notifications"
+          options={{
+            tabBarIcon: ({ focused }: TabBarIconProps) => (
+              <View style={styles.tabIcon}>
+                <Ionicons 
+                  name={focused ? 'notifications' : 'notifications-outline'} 
+                  size={24} 
+                  color={focused ? '#D17842' : '#9CA3AF'} 
+                />
+              </View>
+            ),
+          }}
+        />
+      </Tabs>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0C0F14',
+  },
+  tabBar: {
+    backgroundColor: '#0C0F14',
+    borderTopWidth: 0,
+    borderTopColor: 'transparent',
+    elevation: 0,
+    shadowOpacity: 0,
+    paddingHorizontal: 20,
+  },
+  tabIcon: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 36,
+    width: '100%',
+    maxWidth: 60,
+    marginHorizontal: 10,
+    borderRadius: 8,
+  },
+});

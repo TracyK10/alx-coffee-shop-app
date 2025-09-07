@@ -1,50 +1,170 @@
-# Welcome to your Expo app 👋
+# ☕ ALX Coffee Shop App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, cross-platform mobile application for a coffee shop, built with React Native and Expo. The app allows users to browse coffee menu, place orders, save favorites, and receive notifications.
 
-## Get started
+## 🎨 Design Assets
 
-1. Install dependencies
+Original design assets are available in the `assets/images/figma-designs/` directory. These include:
 
+- Complete UI/UX mockups
+- Icons and illustrations
+- Color palettes and typography guides
+- Component libraries
+
+> **Note**: These designs were created by [B from NAM Design](https://www.figma.com/@namtran) and are used with permission.
+
+## 🚀 Features
+
+- **User Authentication**: Secure sign-in and sign-up flows
+- **Menu Browsing**: Browse through a variety of coffee items
+- **Order Management**: Place and track orders
+- **Favorites**: Save and manage favorite coffee items
+- **Notifications**: Get updates on orders and promotions
+- **Responsive Design**: Works on both iOS and Android
+- **Dark/Light Mode**: Supports system theme preferences
+
+## 🛠 Tech Stack
+
+- **Framework**: React Native with Expo
+- **Navigation**: Expo Router, React Navigation
+- **State Management**: React Context API
+- **Styling**: NativeWind (TailwindCSS for React Native)
+- **Icons**: Expo Vector Icons
+- **Maps**: React Native Maps
+- **Authentication**: Custom JWT-based auth with secure storage
+- **Notifications**: Local notifications
+
+## 📱 Screens
+
+1. **Authentication**
+   - Sign In
+   - Sign Up
+
+2. **Main Tabs**
+   - **Home**: Featured coffees and categories
+   - **Menu**: Full coffee menu with search and filters
+   - **Favorites**: Saved coffee items
+   - **Orders**: Order history and tracking
+   - **Profile**: User profile and settings
+
+3. **Order Flow**
+   - Product Details
+   - Cart
+   - Checkout
+   - Order Confirmation
+   - Order Tracking
+
+## 🏗 Project Structure
+
+```
+├── app/                    # App routes and screens
+│   ├── (auth)/            # Authentication screens
+│   ├── (tabs)/            # Main tab navigation
+│   ├── screens/           # Individual screens
+│   └── _layout.tsx        # Root layout
+├── assets/                # Images, fonts, and other assets
+│   ├── fonts/            # Custom fonts
+│   ├── images/           # App images and icons
+│   │   └── figma-designs/ # Original Figma design assets
+├── components/            # Reusable UI components
+│   └── ui/               # Base UI components
+├── constants/             # App constants and configurations
+├── contexts/              # React Context providers
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utility functions
+├── types/                 # TypeScript type definitions
+└── utils/                 # Helper utilities
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or later)
+- npm or yarn
+- Expo CLI (`npm install -g expo-cli`)
+- iOS Simulator / Android Emulator or physical device
+
+### Installation
+
+1. **Clone the repository**
    ```bash
-   npm install
+   git clone [repository-url]
+   cd alx-coffee-shop-app
    ```
 
-2. Start the app
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
 
+3. **Start the development server**
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Run on your device/emulator**
+   - Press `i` for iOS simulator
+   - Press `a` for Android emulator
+   - Scan the QR code with Expo Go app (for physical devices)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🔧 Configuration
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Environment Variables
 
-## Get a fresh project
+Create a `.env` file in the root directory and add the following variables:
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```env
+EXPO_PUBLIC_API_URL=your_api_url_here
+# Add other environment variables as needed
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Fonts
 
-## Learn more
+Custom fonts are loaded automatically on app start. Place your font files in `assets/fonts/` and update the `loadFonts` function in `utils/fonts.ts` if needed.
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📱 Building the App
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### For Development
 
-## Join the community
+```bash
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+### For Production
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+#### Android
+```bash
+expo prebuild
+npx expo run:android
+```
+
+#### iOS
+```bash
+expo prebuild
+npx expo run:ios
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Credits
+
+- **UI/UX Design**: [Coffee Shop Mobile App Design](https://www.figma.com/design/RhP1APTkYyHY3DTClVv5gU/Coffee-Shop-Mobile-App-Design--Community-?node-id=0-1&p=f&t=oeHvzgTJcRXCgQdF-0) by [B from NAM Design](https://www.figma.com/@namtran) on Figma
+  > *"Hi, my name is B, and I am a product designer at NAM Design. I have been working in this field for more than four years, and I hope that my resources can help you with your design process. Cheers!"*
+- ALX Software Engineering Program
+
+---
+
+Built with ❤️ using React Native & Expo
+
+## 📚 Development Resources
+
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Documentation](https://reactnative.dev/docs/getting-started)
+- [Expo Router Documentation](https://expo.github.io/router/docs/)
+
+This project uses [file-based routing](https://expo.github.io/router/docs/) for navigation.

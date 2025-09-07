@@ -1,0 +1,138 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <radialGradient id="backgroundGradient" cx="0.5" cy="0.3" r="0.8">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#5D2E0A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2C1810;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="cupGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#F5F5F5;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#E0E0E0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CCCCCC;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="coffeeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2B48C;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#CD853F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="steamGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Rectangle Background -->
+  <rect width="1024" height="1024" rx="220" ry="220" fill="url(#backgroundGradient)"/>
+  
+  <!-- Coffee Cup -->
+  <g transform="translate(512, 520)">
+    <!-- Cup Base -->
+    <ellipse cx="0" cy="120" rx="140" ry="25" fill="#CCCCCC" opacity="0.3"/>
+    
+    <!-- Main Cup Body -->
+    <path d="M -120 100 
+             L -130 -80 
+             Q -130 -100 -110 -100
+             L 110 -100
+             Q 130 -100 130 -80
+             L 120 100
+             Q 120 120 100 120
+             L -100 120
+             Q -120 120 -120 100 Z" 
+          fill="url(#cupGradient)" 
+          stroke="#DDDDDD" 
+          stroke-width="2"/>
+    
+    <!-- Coffee Surface -->
+    <ellipse cx="0" cy="-95" rx="115" ry="15" fill="url(#coffeeGradient)"/>
+    
+    <!-- Cup Handle -->
+    <path d="M 130 -40 
+             Q 180 -40 180 0
+             Q 180 40 130 40"
+          fill="none" 
+          stroke="url(#cupGradient)" 
+          stroke-width="18" 
+          stroke-linecap="round"/>
+    
+    <!-- Inner Handle -->
+    <path d="M 135 -30 
+             Q 170 -30 170 0
+             Q 170 30 135 30"
+          fill="none" 
+          stroke="#F5F5F5" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <!-- Coffee Surface Highlight -->
+    <ellipse cx="-20" cy="-95" rx="40" ry="6" fill="#F4E4BC" opacity="0.6"/>
+    
+    <!-- Latte Art -->
+    <g transform="translate(0, -95)">
+      <!-- Leaf pattern -->
+      <path d="M 0 -5 Q -25 -8 -30 5 Q -25 18 0 15 Q 25 18 30 5 Q 25 -8 0 -5 Z" 
+            fill="#F5F5DC" opacity="0.9"/>
+      <path d="M 0 -5 L 0 15" stroke="#E6D7B8" stroke-width="2" stroke-linecap="round"/>
+      <path d="M -15 2 Q 0 8 15 2" stroke="#E6D7B8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Steam -->
+  <g transform="translate(512, 280)">
+    <path d="M -20 0 Q -15 -30 -20 -60 Q -25 -90 -15 -120" 
+          stroke="url(#steamGradient)" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"
+          opacity="0.7">
+      <animate attributeName="d" 
+               values="M -20 0 Q -15 -30 -20 -60 Q -25 -90 -15 -120;
+                       M -20 0 Q -25 -30 -15 -60 Q -20 -90 -25 -120;
+                       M -20 0 Q -15 -30 -20 -60 Q -25 -90 -15 -120" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M 0 0 Q 5 -25 0 -55 Q -5 -85 5 -115" 
+          stroke="url(#steamGradient)" 
+          stroke-width="3" 
+          fill="none" 
+          stroke-linecap="round"
+          opacity="0.6">
+      <animate attributeName="d" 
+               values="M 0 0 Q 5 -25 0 -55 Q -5 -85 5 -115;
+                       M 0 0 Q -5 -25 5 -55 Q 0 -85 -5 -115;
+                       M 0 0 Q 5 -25 0 -55 Q -5 -85 5 -115" 
+               dur="2.5s" 
+               repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M 20 0 Q 15 -35 20 -65 Q 25 -95 15 -125" 
+          stroke="url(#steamGradient)" 
+          stroke-width="3" 
+          fill="none" 
+          stroke-linecap="round"
+          opacity="0.5">
+      <animate attributeName="d" 
+               values="M 20 0 Q 15 -35 20 -65 Q 25 -95 15 -125;
+                       M 20 0 Q 25 -35 15 -65 Q 20 -95 25 -125;
+                       M 20 0 Q 15 -35 20 -65 Q 25 -95 15 -125" 
+               dur="3.5s" 
+               repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Subtle Coffee Beans -->
+  <g opacity="0.15">
+    <ellipse cx="200" cy="200" rx="8" ry="12" fill="#8B4513" transform="rotate(45 200 200)"/>
+    <ellipse cx="824" cy="300" rx="6" ry="10" fill="#8B4513" transform="rotate(-30 824 300)"/>
+    <ellipse cx="150" cy="824" rx="7" ry="11" fill="#8B4513" transform="rotate(60 150 824)"/>
+    <ellipse cx="874" cy="750" rx="8" ry="12" fill="#8B4513" transform="rotate(-45 874 750)"/>
+  </g>
+</svg>

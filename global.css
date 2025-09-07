@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Sora-Regular';
+  src: url('./assets/fonts/Sora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora-SemiBold';
+  src: url('./assets/fonts/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora-Bold';
+  src: url('./assets/fonts/Sora-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-background text-dark font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-dark;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  p {
+    @apply text-base text-gray-600;
+  }
+}
+
+/* Custom components */
+@layer components {
+  .container {
+    @apply px-6 mx-auto max-w-7xl;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-medium text-base;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-primary px-6 py-3 rounded-xl font-medium text-base;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl p-6 shadow-sm;
+  }
+}
